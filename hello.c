@@ -5,7 +5,7 @@ void main()
 {
   printf("Hello World\n");
   time_t t;
-  struct tm* jstTm;
+  struct tm* localtime(const time_t *timer);
   time(&t);
   jstTm = localtime(&t);
   printf("%04d/%02d/%02d %02d:%02d:%02d \n",
