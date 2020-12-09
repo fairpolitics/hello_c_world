@@ -4,7 +4,9 @@
 void main()
 {
   printf("Hello World\n");
+  time_t t;
   struct tm* jstTm;
+  time(&t);
   jstTm = localtime(&t);
   printf("%04d/%02d/%02d(%s) %02d:%02d:%02d \n",
     jstTm->tm_year + 1900,
