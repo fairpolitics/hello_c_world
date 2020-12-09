@@ -1,6 +1,17 @@
 #include <stdio.h>
+#include <time.h>
 
 void main()
 {
   printf("Hello World\n");
+  struct tm* jstTm;
+  jstTm = localtime(&t);
+  printf("%04d/%02d/%02d(%s) %02d:%02d:%02d \n",
+    jstTm->tm_year + 1900,
+    jstTm->tm_mon + 1,
+    jstTm->tm_mday,
+    week[jstTm->tm_wday],
+    jstTm->tm_hour,
+    jstTm->tm_min,
+    jstTm->tm_sec);
 }
